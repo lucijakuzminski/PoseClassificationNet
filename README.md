@@ -33,6 +33,12 @@ https://github.com/NVIDIA-AI-IOT/deepstream_tao_apps/blob/release/tao_ds7.1ga/ap
 
 Nakon kloniranja repozitorija na Jetson, preuzeti su potrebni modeli i konfiguracijske datoteke prema navedenim uputama.
 
+Uz službene upute bilo j epotrebno pokrenuti sljedeće naredbe:
+
+`sudo apt-get install libeigen3-dev
+sudo ln -s /usr/include/eigen3/Eigen /usr/include/Eigen
+sudo CUDA_VER=12.6 make`
+
 ## Moje izmjene
 
 U odnosu na originalni NVIDIA kod, promijenjene su samo dvije datoteke kako bi se primjer ispravno pokrenuo na uređaju. Ostatak projekta ostao je nepromijenjen.
@@ -42,9 +48,7 @@ U odnosu na originalni NVIDIA kod, promijenjene su samo dvije datoteke kako bi s
 U datoteci `deepstream_pose_classification_config.yaml` napravljene su sljedeće promjene:
 
 - postavljen je `enc-type` na vrijednost `1`
-- promijenjena je rezolucija u `streammux` dijelu konfiguracije na:
-    width: 1920
-    height: 1080
+- promijenjena je rezolucija u `streammux` dijelu konfiguracije (vrijednost `width` na `1920` i vrijednost `height` na `1080`
 
 U datoteci `config_tracker_NvDCF_accuracy.yml` napravljena je sljedeća promjena:
 
