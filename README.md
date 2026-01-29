@@ -51,6 +51,7 @@ U datoteci `deepstream_pose_classification_config.yaml` napravljene su sljedeće
 
 - postavljen je `enc-type` na vrijednost `1`
 - promijenjena je rezolucija u `streammux` dijelu konfiguracije:
+  
   ```yaml
   width: 1920
   height: 1080
